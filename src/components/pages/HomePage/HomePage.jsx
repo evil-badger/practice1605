@@ -9,7 +9,7 @@ function HomePage() {
   return (
     <Box>
       <Typography variant="h1">HomePage</Typography>
-      {isLogin ? <Link to="/profile">Profile</Link> : <Link to="/auth">Auth</Link>}
+      {isLogin ? <Link to="/profile">Profile</Link> : <Link to="/auth/login">Auth</Link>}
     </Box>
   );
 }

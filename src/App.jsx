@@ -4,6 +4,7 @@ import HomePage from "./components/pages/HomePage/HomePage";
 import Layout from "./components/Layout/Layout";
 import AuthPage from "./components/pages/AuthPage/AuthPage";
 import Profile from "./components/pages/Profile/Profile";
+import LoginForm from "./components/pages/AuthPage/Components/LoginForm";
 
 const router = createBrowserRouter([
   {
@@ -17,12 +18,19 @@ const router = createBrowserRouter([
       {
         path: "auth",
         Component: AuthPage,
+        children: [
+          {
+            path: "login",
+            Component: LoginForm
+          },
+
+        ]
       },
       {
         path: "profile",
         Component: Profile,
       }
-  ],
+    ],
   },
 ]);
 
